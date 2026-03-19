@@ -1,0 +1,128 @@
+@import url("file:///home/lukas/.cache/wal/colors-waybar.css");
+
+* {
+  min-height: 0;
+  font-family: Lexend, "JetBrainsMono Nerd Font Propo";
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* ───── Waybar Window ───── */
+
+window#waybar {
+  background-color: transparent;
+}
+
+/* ───── Workspaces ───── */
+
+#workspaces {
+  background-color: transparent;
+  padding: 5px 3px;
+  margin-left: 12px;
+}
+
+#workspaces button {
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.3rem;
+  border-radius: 6px;
+  background-color: transparent;
+  color: @color4;
+}
+
+#workspaces button:hover {
+  color: @color5;
+  background-color: #181825;
+}
+
+#workspaces button.active {
+  color: @color6;
+  border-bottom: 2px solid @color5;
+}
+
+#workspaces button.urgent {
+  color: @color5;
+}
+
+/* ───── Modules ───── */
+
+#cpu,
+#memory,
+#network,
+#battery,
+#pulseaudio,
+#clock,
+#custom-notification,
+#mpris,
+#window {
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.4rem;
+  border-radius: 6px;
+  color: @color6;
+}
+
+/* ───── Hover ───── */
+
+#network:hover,
+#battery:hover,
+#pulseaudio:hover,
+#clock:hover {
+  background-color: #181825;
+  border: 1px solid @color6;
+  border-radius: 30px;
+}
+
+/* ───── Audio ───── */
+
+#pulseaudio.muted {
+  color: @color5;
+}
+
+/* ───── Network ───── */
+
+#network.disconnected {
+  color: @color5;
+}
+
+/* ───── Battery ───── */
+
+#battery.charging {
+  color: @color6;
+}
+
+#battery {
+  color: @color6;
+}
+
+#battery.warning {
+  color: @color5;
+}
+
+#battery.critical {
+  color: @color4;
+}
+
+/* ───── Clock ───── */
+
+#clock,
+#clock.simpleclock {
+  color: @color6;
+}
+
+/* ───── Window Title ───── */
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+/* ───── Tooltip ───── */
+
+tooltip {
+  background-color: #181825;
+  border: 1px solid #313244;
+  border-radius: 12px;
+  color: @color6;
+}
+
+tooltip label {
+  padding: 6px;
+}

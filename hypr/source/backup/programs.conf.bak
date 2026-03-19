@@ -1,0 +1,11 @@
+###################
+### MY PROGRAMS ###
+###################
+
+$browser = brave
+$terminal = ~/.config/kitty/dirKitty.sh
+$fileManager = dolphin
+$menu = ~/.config/rofi/launcher.sh || pkill rofi
+$waybar = ~/.config/waybar/launch.sh
+$logoutMenu = wlogout
+

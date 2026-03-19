@@ -1,0 +1,9 @@
+general {
+	lock_cmd = pidof hyprlock || $HOME/.config/scripts/convenience/hyprlockWall.sh
+}
+
+listener {
+    timeout = 500
+    on-timeout = pidof hyprlock || $HOME/.config/scripts/convenience/hyprlockWall.sh
+    # on-resume = notify-send "Welcome Soilder"  
+}

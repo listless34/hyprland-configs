@@ -1,0 +1,85 @@
+$font = JetBrains Mono
+
+general {
+    hide_cursor = true
+}
+
+animations {
+    enabled = true
+    bezier = linear, 1, 1, 0, 0
+    animation = fadeIn, 1, 5, linear
+    animation = fadeOut, 1, 5, linear
+    animation = inputFieldDots, 1, 2, linear
+}
+
+background {
+    monitor =
+    path = $WALLPAPER
+    color = rgba(25, 20, 20, 1.0)
+    blur_passes = 1
+}
+
+input-field {
+    monitor =
+    # size = 20%, 5%
+    # outline_thickness = 3
+    inner_color = rgba(0, 0, 0, 0.0) 
+
+    outer_color = rgba(0, 0, 0, 0.0) 
+    check_color = rgba(0, 0, 0, 0.0) 
+    fail_color = rgba(ff0000ee) 
+
+    font_color = rgba(0, 0, 0, 0.0)
+    fade_on_empty = false
+    rounding = 15
+
+    font_family = $font
+    placeholder_text = 
+    fail_text = $PAMFAIL
+
+    position = 0, -100
+    halign = center
+    valign = center
+}
+
+# TIME
+label {
+    monitor =
+    text = $TIME
+    text_align = center
+
+    color = rgba($COLOR_RGB, 1.0)
+    
+    font_size = 465
+    font_family = $font
+
+    shadow_passes = 3
+    shadow_size = 5
+    shadow_color = rgb($COLOR_RGB)
+    # shadow_color = rgb(26, 25, 21)
+
+    position = 0, 125
+    halign = center
+    valign = center
+}
+
+# DATE
+label {
+    monitor =
+    
+    text = cmd[update:60000] date "+%d, %B %Y" 
+    text_align = center
+
+    color = rgba($COLOR_RGB, 1.0)
+    
+    font_size = 65
+    font_family = $font
+ 
+    shadow_passes = 3
+    shadow_size = 5
+    shadow_color = rgb($COLOR_RGB)   
+    
+    position = 0, -300
+    halign = center
+    valign = center
+}
